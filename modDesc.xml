@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="109">
+    <author>Robert Drygas / ChatGPT</author>
+    <version>1.0.0.0</version>
+
+    <title>
+        <en>Farmland Price Difficulty</en>
+        <pl>Ceny gruntów a poziom trudności</pl>
+    </title>
+
+    <description>
+        <en><![CDATA[
+Makes farmland purchase prices respond to the savegame economic difficulty using a dedicated land-price multiplier table.
+
+Default values:
+- Easy:   0.75 (-25%)
+- Normal: 1.00 (standard map/game price)
+- Hard:   1.25 (+25%)
+
+The mod keeps farmland prices stable with Precision Farming by excluding its yieldPotential factor from the land purchase price before applying the difficulty multiplier.
+
+Prices are refreshed automatically after loading a career and whenever the economic difficulty is changed.
+        ]]></en>
+        <pl><![CDATA[
+Uzależnia ceny zakupu gruntów od poziomu trudności ekonomicznej zapisu gry, używając osobnej tabeli mnożników cen ziemi.
+
+Wartości domyślne:
+- Łatwy:    0,75 (-25%)
+- Normalny: 1,00 (standardowa cena mapy/gry)
+- Trudny:   1,25 (+25%)
+
+Mod zapewnia stabilne ceny z Precision Farming, wyłączając wpływ współczynnika yieldPotential na cenę zakupu gruntu przed zastosowaniem mnożnika trudności.
+
+Ceny są odświeżane automatycznie po wczytaniu kariery oraz po każdej zmianie poziomu trudności ekonomicznej.
+        ]]></pl>
+    </description>
+
+    <multiplayer supported="false" />
+
+    <iconFilename>mod_icon.dds</iconFilename>
+
+    <extraSourceFiles>
+        <sourceFile filename="scripts/FarmlandPriceDifficulty.lua" />
+    </extraSourceFiles>
+</modDesc>
